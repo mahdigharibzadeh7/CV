@@ -2,8 +2,19 @@ let media = document.querySelector("video");
 let play = document.querySelector(".play");
 let rwd = document.querySelector(".rewind");
 let fwd = document.querySelector(".forward");
+let crntTime = document.querySelector(".currenttime");
+let videoTime = document.querySelector(".videotime");
+let progressBar = document.querySelector(".progressbar-current"); 
+  
+media.addEventListener('timeupdate', function () {
+  crntTime.textContent = setTime(media.currentTime)
+  let barLength = (media.currentTime / media.duration) * 100
+  progressBar.style = `background: linear-gradient(90deg, rgba(230, 126, 34, 1) ${barLength}%, #e1e1e1 0%)`;
+  progressBar.value = barLength        // Doesn't work
+})
 
 play.addEventListener("click", function () {
+  videoTime.textContent = setTime(media.duration)
   if (media.paused) {
     togglePlay({ show: true });
     media.play();
@@ -32,4 +43,21 @@ function togglePlay({ show }) {
       icon.classList.remove("fa-solid", "fa-pause");
     icon.classList.add("fa", "fa-play");
   }
+}
+
+function setTime(time) {
+  let minutes = Math.floor(time / 60)
+  let seconds = Math.floor(time - (minutes * 60))
+  let minutesValue, secondsValue;
+  if (minutes < 10)
+    minutesValue = '0' + minutes
+  else
+    minutesValue = minutes
+  
+  if (seconds < 10)
+    secondsValue = '0' + seconds
+  else
+    secondsValue = seconds
+  
+  return minutesValue + ':' + secondsValue
 }
