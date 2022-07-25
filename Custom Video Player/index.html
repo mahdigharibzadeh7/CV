@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="fontAwsome.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="myplayer">
+      <video src="mov_bbb.mp4"></video>
+      <div class="controls-container">
+        <div class="progressBar">
+          <input
+            class="progressbar-current"
+            type="range"
+            min="1"
+            max="100"
+            step="1"
+            value="0"
+          />
+        </div>
+        <div class="controls">
+          <div class="left">
+            <div class="btns play">
+              <i class="fa fa-play" style="font-size: 40px"></i>
+            </div>
+            <div class="btns rewind">
+              <i class="fa fa-step-backward" style="font-size: 40px"></i>
+            </div>
+            <div class="btns forward">
+              <i class="fa fa-step-forward" style="font-size: 40px"></i>
+            </div>
+            <span id="timer">00:00 / 00:00</span>
+          </div>
+          <div class="right">
+            <div class="btns volume">
+              <i class="fa fa-volume-up" style="font-size: 40px"></i>
+              <div class="volume_progressbar">
+                <input id="volume_bar" type="range" min="1" max="100" step="1" value="50">
+              </div>
+            </div>
+            <div class="btns fullscreen">
+              <i class="fa-solid fa-expand" style="font-size: 40px"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
