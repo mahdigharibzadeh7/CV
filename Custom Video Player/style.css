@@ -26,18 +26,18 @@ video {
   background-color: rgba(0, 0, 0, 0.772);
 }
 
-.progressBar{
-    height: 6px;
-    background: #e1e1e1;
-    width: 100%;
+.progressBar {
+  height: 6px;
+  background: #e1e1e1;
+  width: 100%;
 }
 
 .progressbar-current {
   height: 6px;
   margin: 0;
   position: absolute;
-  width:  100%;
-} 
+  width: 100%;
+}
 
 .controls {
   margin: 10px 15px;
@@ -45,13 +45,14 @@ video {
   display: none;
 }
 
-.myplayer:hover .controls{
+.controls-container:hover .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.left, .right {
+.left,
+.right {
   display: flex;
   align-items: center;
 }
@@ -76,6 +77,6 @@ video {
   display: none;
 }
 
-.volume:hover .volume_progressbar{
+.volume:hover .volume_progressbar {
   display: block;
 }
