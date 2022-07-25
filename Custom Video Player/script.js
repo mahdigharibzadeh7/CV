@@ -10,7 +10,11 @@ media.addEventListener("timeupdate", function () {
   crntTime.textContent = setTime(media.currentTime);
   let barLength = (media.currentTime / media.duration) * 100;
   progressBar.style = `background: linear-gradient(90deg, rgba(230, 126, 34, 1) ${barLength}%, #e1e1e1 0%)`;
-  progressBar.value = barLength; // Doesn't work
+  progressBar.value = barLength;
+});
+
+progressBar.addEventListener("input", function () {
+  media.currentTime = (this.value / 100) * media.duration;
 });
 
 play.addEventListener("click", function () {
