@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Vazir Code;
+  src: url("Vazir-Code.eot");
+  src: url("Vazir-Code.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Code.woff") format("woff"),
+    url("Vazir-Code.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir Code Hack;
+  src: url("Vazir-Code-Hack.eot");
+  src: url("Vazir-Code-Hack.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Code-Hack.woff") format("woff"),
+    url("Vazir-Code-Hack.ttf") format("truetype");
+  font-weight: normal;
+}
+
+pre,
+code {
+  font-family: "Vazir Code", "Vazir Code Hack", monospaced;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  color: #f8f7f3;
+  font-family: "Vazir Code", "Vazir Code Hack", monospaced;
+}
+
+.list-container {    /* This is not center */
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0.5rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 4px solid #fb4832;
+  background-color: #3d2e33;
+  cursor: move;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.list-item-head {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.list-content {
+  border-right: 4px solid #ffa53a;
+  padding: 1rem;
+}
+
+.item-title {
+  font-size: 2rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding-right: 1rem;
+}
