@@ -30,12 +30,12 @@ code {
   font-family: "Vazir Code", "Vazir Code Hack", monospaced;
 }
 
-.main{
+.main {
   display: flex;
   justify-content: center;
 }
 
-.list-container {    
+.list-container {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -71,4 +71,12 @@ code {
   font-size: 1.5rem;
   margin-top: 1rem;
   padding-right: 1rem;
+}
+
+.list-item.over {
+  border-top: 10px solid blue;
+}
+
+.list-item.dragEl{
+  opacity: 0.4;
 }
