@@ -1,22 +1,26 @@
 class draggable {
   dragSrcEl;
+  list;
+  update;
   constructor(option) {
     this.setupList(option);
+    this.list = option.list;
+    if (option.update) this.update = option.update;
     for (const listItem of option.el.children) {
       this.addDnDHandler(listItem);
     }
   }
 
   setupList(option) {
-    let { List, el: element, template } = option;
+    let { list, el: element, template } = option;
     if (!element) throw Error("The list is not exist!");
-    if (!List) throw Error("The data is not exist!");
-    if (!Array.isArray(List)) throw Error("The list is not an array!");
+    if (!list) throw Error("The data is not exist!");
+    if (!Array.isArray(list)) throw Error("The list is not an array!");
     if (!template) throw Error("This is not a template function!");
     if (typeof template !== "function")
       throw Error("The template is not a function!");
 
-    List.forEach((item) => {
+    list.forEach((item) => {
       element.innerHTML += template(item);
     });
   }
@@ -60,6 +64,14 @@ class draggable {
 
   handleDragEnd(e) {
     e.target.classList.remove("dragEl");
+    let newList = [];
+    document
+      .querySelector("#list-container")
+      .querySelectorAll(".list-item")
+      .forEach((elm) =>
+        newList.push(this.list.find((item) => elm.id == item.id))
+      );
+    this.update(newList);
   }
 
   handleDragEnter(e) {}

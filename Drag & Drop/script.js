@@ -32,7 +32,7 @@ let data = [
 ];
 
 new draggable({
-  List: data,
+  list: data,
   el: document.querySelector("#list-container"),
   template: (item) => {
     return `
@@ -47,7 +47,7 @@ new draggable({
         </div>
         `;
   },
-  update: (List) => {
-    console.log(List);
+  update: (list) => {
+    console.log("new list: ", list);
   },
 });
