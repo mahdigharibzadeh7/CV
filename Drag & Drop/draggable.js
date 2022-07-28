@@ -33,14 +33,14 @@ class draggable {
   }
 
   handleDragStart(e) {
-    this.dragSrcEl = e.target
-    e.dataTransfer.setData('text/html', e.target.outerHTML)
-    e.target.classList.add('dragEl')
-  } 
+    this.dragSrcEl = e.target;
+    e.dataTransfer.setData("text/html", e.target.outerHTML);
+    e.target.classList.add("dragEl");
+  }
 
   handleDragOver(e) {
-    if (e.preventDefault) e.preventDefault()
-    e.target.classList.add('over')
+    if (e.preventDefault) e.preventDefault();
+    e.target.classList.add("over");
   }
 
   handleDragLeave(e) {
@@ -48,20 +48,19 @@ class draggable {
   }
 
   handleDragDrop(e) {
-    let target = e.target.closest('.list-item')
+    let target = e.target.closest(".list-item");
     if (target !== this.dragSrcEl) {
       target.parentNode.removeChild(this.dragSrcEl);
-      let dropHTML = e.dataTransfer.getData('text/html')
-      target.insertAdjacentHTML('beforebegin', dropHTML)
-      this.addDnDHandler(target.previousSibling)
+      let dropHTML = e.dataTransfer.getData("text/html");
+      target.insertAdjacentHTML("beforebegin", dropHTML);
+      this.addDnDHandler(target.previousSibling);
     }
-    e.target.classList.remove('over')
+    e.target.classList.remove("over");
   }
 
   handleDragEnd(e) {
     e.target.classList.remove("dragEl");
   }
 
-  handleDragEnter(e) {
-  }
+  handleDragEnter(e) {}
 }

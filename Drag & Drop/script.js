@@ -48,6 +48,6 @@ new draggable({
         `;
   },
   update: (List) => {
-    console.log(List)
-  }
+    console.log(List);
+  },
 });
