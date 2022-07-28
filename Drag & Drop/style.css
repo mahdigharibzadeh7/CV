@@ -77,6 +77,6 @@ code {
   border-top: 10px solid blue;
 }
 
-.list-item.dragEl{
+.list-item.dragEl {
   opacity: 0.4;
 }
