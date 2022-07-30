@@ -27,6 +27,8 @@ function calculate() {
               if (arr[index] == "ی") {
                 if (!specialCharacters(arr[index + 1])) sum += 2;
               } else sum += 2;
+            } else {
+              if (arr[index] != "ی") sum += 2;
             }
           } else if (i == 2) sum += 3;
         }
