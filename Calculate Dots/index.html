@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Calculate Dots</title>
+  </head>
+  <body>
+    <div class="header">
+      <p>شمارنده نقطه های کلمات</p>
+    </div>
+    <div class="container">
+      <div class="cal-container">
+        <div class="input">
+          <input type="text" id="cal-input" oninput="calculate()" value="" placeholder="تایپ کن..." />
+        </div>
+        <div class="cal-btn">
+          <button type="button" id="cal-btn" onclick="calculate()">
+            محاسبه کن !
+          </button>
+        </div>
+        <div class="cal-resualt">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
