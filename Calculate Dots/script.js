@@ -32,12 +32,10 @@ function calculate() {
         }
       }
     }
-    }
-    
-    let resualt = document.querySelector(".cal-resualt p")
+  }
 
-    resualt.innerHTML = "تعداد نقطه ها : " + sum;
-    if (resualt.innerHTML == "تعداد نقطه ها : " + 0)
-        resualt.innerHTML = ""
-        
+  let resualt = document.querySelector(".cal-resualt p");
+
+  resualt.innerHTML = "تعداد نقطه ها : " + sum;
+  if (resualt.innerHTML == "تعداد نقطه ها : " + 0) resualt.innerHTML = "";
 }
