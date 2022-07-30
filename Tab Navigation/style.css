@@ -46,14 +46,14 @@ nav {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  margin: 3rem 3rem 0;
+  margin: 1rem 1rem 0;
   background-color: #fb7785;
   border-radius: 70px 20px;
   width: 65%;
 }
 
 .cd-tabs-navigation li {
-  padding: 3rem 6rem;
+  padding: 1rem 0.5rem;
   font-size: 2rem;
   text-align: center;
 }
@@ -81,9 +81,9 @@ nav {
 .cd-tabs-content {
   direction: rtl;
   width: 65%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #24203a;
-  padding: 3rem;
+  padding: 1.5rem;
   border-radius: 50px;
 }
 
