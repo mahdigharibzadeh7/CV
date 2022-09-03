@@ -1,0 +1,6 @@
+.card-container{
+    @apply bg-gray-800
+    m-5
+    rounded-xl
+    p-5
+}

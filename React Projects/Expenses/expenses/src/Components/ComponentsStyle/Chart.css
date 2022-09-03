@@ -1,0 +1,49 @@
+.chart-container {
+  @apply flex
+  flex-wrap
+  flex-col
+  bg-yellow-200
+  rounded-xl
+  m-5;
+}
+
+.chart-bar {
+  @apply flex
+    flex-row
+    justify-around
+    mt-5;
+}
+
+.chart-bar__inner {
+  @apply flex
+    flex-col-reverse
+    rounded-xl
+    border-2
+    border-black
+    bg-slate-300
+    h-40 
+    w-5;
+}
+
+.chart-bar__fill {
+  @apply bg-purple-900
+    w-[1.02rem]
+    -mt-[0.01rem]
+    -ml-[0.02rem] 
+    motion-reduce:transition-colors 
+    duration-500 
+    ease-in-out
+    rounded-xl;
+}
+
+.chartBar {
+  @apply px-10;
+}
+
+.month {
+  @apply flex
+    flex-row
+    justify-around
+    mb-5
+    font-noto;
+}

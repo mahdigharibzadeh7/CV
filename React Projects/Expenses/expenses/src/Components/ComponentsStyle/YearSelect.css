@@ -1,0 +1,21 @@
+.select-container {
+  @apply flex
+  justify-between
+  items-center
+  m-2
+  font-noto
+}
+
+.select-container select{
+  @apply bg-white
+  rounded-md
+  m-5
+  py-3
+  px-10
+}
+
+.select-container p{
+  @apply text-white
+  text-2xl
+  m-5
+}

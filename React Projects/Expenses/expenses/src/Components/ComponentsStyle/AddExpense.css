@@ -1,0 +1,69 @@
+.form-container {
+  @apply border-none
+    rounded-xl
+    bg-purple-500
+    text-white
+    m-5
+    p-2;
+}
+
+.form-items {
+  @apply grid
+    grid-cols-2
+    p-5;
+}
+
+.title,
+.price,
+.date {
+  @apply flex
+    flex-col;
+}
+
+.title label,
+.price label,
+.date label {
+  @apply p-2
+    text-2xl
+    font-bold
+    text-black;
+}
+
+.title input,
+.price input,
+.date input {
+  @apply m-2
+    rounded-lg
+    border-none
+    text-black
+    font-medium
+    text-lg
+    p-2
+    w-96;
+}
+
+.btns {
+  @apply flex
+    flex-row
+    justify-end
+    self-end;
+}
+
+.submit-btn button,
+.cancel-btn button,
+.add-btn button {
+  @apply border-none
+    text-white
+    bg-purple-900
+    rounded-lg
+    py-4
+    px-8
+    font-noto
+    mx-4;
+}
+
+.add-btn {
+  @apply flex
+  justify-center
+  m-5;
+}

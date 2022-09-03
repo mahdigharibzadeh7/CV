@@ -1,0 +1,54 @@
+.expense_container {
+  @apply flex
+    justify-between
+    items-center
+    text-white
+    bg-gray-500
+    border-none
+    rounded-lg
+    h-32
+    m-5
+    p-2
+    font-noto;
+}
+
+.expense_container__date {
+  @apply flex
+    flex-col
+    justify-center
+    bg-gray-700
+    text-center
+  border-white
+    border-2
+    rounded-lg
+    w-28
+    h-28
+    mr-20;
+}
+
+.day {
+  @apply text-3xl;
+}
+.month {
+  @apply text-sm;
+}
+.year {
+  @apply text-xs
+    text-gray-200;
+}
+
+.expense_container__title {
+  @apply -ml-[37rem]
+  text-2xl;
+}
+
+.expense_container__price {
+  @apply mr-5
+  border-white
+  border-2
+  rounded-lg
+  bg-purple-800
+  py-1
+  px-3
+  text-xl;
+}
